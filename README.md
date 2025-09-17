@@ -60,23 +60,8 @@ PeerSupportBot isn’t a blunt filter. It’s a **supportive agent** that unders
 
 ### High-Level Flow
 
-```mermaid
-### High-Level Flow
 
-```mermaid
-flowchart TD
-    A[Incoming Message] --> B[Sentinel: Toxicity + Sarcasm]
-    B --> C[Triage: Seriousness + Rules]
-    C -->|Crisis| D[Responder: Redact + DM Crisis Resources]
-    C -->|Serious| E[Responder: Redact + DM Warning]
-    C -->|Moderate| F[Responder: Redact + Softer DM]
-    C -->|None| G[Archivist: Log Only]
-    D --> H[Archivist: DB + Reports]
-    E --> H
-    F --> H
-    G --> H
-    H --> I[Reports: Daily · Rolling · Special]
-## Agent Roles
+Agent Roles
 🛡️ Sentinel (Detection)
 
 Runs detectors and returns: tox_probs (multi-label), sarcasm_prob, tox_max.
