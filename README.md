@@ -1,3 +1,10 @@
+#Name - Dhruv Mishra 
+
+> Roll No. - 230106022
+> Institute - IIT Guwahati
+> Department - Biosciences and Bioengineering
+> Role - Data Scientist
+
 # 🤖 PeerSupportBot
 
 > An AI-powered Discord companion that keeps communities safe **and** humane.  
