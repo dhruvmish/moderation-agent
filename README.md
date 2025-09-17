@@ -50,4 +50,4 @@ flowchart TD
     E --> H
     F --> H
     G --> H
-    H --> I[Reports (Daily / Rolling / Special)]
+    H --> I[Reports: Daily · Rolling · Special]
