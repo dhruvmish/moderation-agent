@@ -210,17 +210,17 @@ These rules ensure nothing obviously dangerous slips through model noise.
 4) Final Decision Function
 Given seriousness ∈ [0,1] and the overrides above:
 
-```text
+text
+Copy code
 IF crisis_regex(text)            → tag = CRISIS,   redact = True, dm_user = True
 ELIF extreme_regex(text)         → tag = SERIOUS,  redact = True, dm_user = True
 ELIF tox_max ≥ 0.80              → tag = SERIOUS,  redact = True, dm_user = True
 ELIF seriousness ≥ 0.65          → tag = SERIOUS,  redact = True, dm_user = True
 ELIF seriousness ≥ 0.45          → tag = WARN,     redact = True, dm_user = True
 ELSE                             → tag = NONE,     redact = False, dm_user = False
-
 Thresholds are configurable via environment variables.
 
-Why this works in real life
+5) Why this works in real life
 Protects against false negatives (hard overrides catch extreme harm).
 
 Reduces false positives on everyday banter (sarcasm relief).
@@ -262,10 +262,9 @@ Special Report when a user exceeds 5 violations (final warning is also posted in
 Reports are saved to a folder (e.g., reports/) and the path is logged.
 
 Getting Started
-
-Bash
-
-git clone https://github.com/<your-username>/PeerSupportBot.git
+bash
+Copy code
+git clone [https://github.com/](https://github.com/)<your-username>/PeerSupportBot.git
 cd PeerSupportBot
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
@@ -274,8 +273,8 @@ cp .env.example .env           # fill tokens and thresholds
 Configuration
 Environment variables (typical):
 
-Code snippet
-
+env
+Copy code
 DISCORD_BOT_TOKEN=your-token
 TZ=Asia/Kolkata
 
@@ -290,9 +289,8 @@ ALWAYS_REDACT_TOX=0.80
 You can tune the thresholds for your community after a short pilot.
 
 Running the Bot
-
-Bash
-
+bash
+Copy code
 python -m app.bot
 When the bot starts, it syncs slash commands and schedules the daily report.
 
@@ -309,7 +307,6 @@ can we rape the guy / let’s kill him	Redact + DM (extreme override)
 I want to kill myself	Crisis → Redact + DM crisis resources
 After 5 violations	Final warning in DM + channel + report
 
-Export to Sheets
 Evaluation (Models & Policy)
 Model-level (intrinsic):
 
