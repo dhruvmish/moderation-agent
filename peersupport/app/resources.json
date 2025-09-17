@@ -1,0 +1,10 @@
+{
+  "self_harm": [
+    {"name": "IITG Psychiatrist Appointments", "url": "https://online.iitg.ac.in/chw/vdstudentspecial.jsp"},
+    {"name": "Kiran Mental Health Helpline (24x7)", "url": "1800-599-0019"},
+    {"name": "AASRA 24x7 Helpline", "url": "9152987821"}
+  ],
+  "harassment": [
+    {"name": "University Grievance Cell", "url": "mailto:grievance@univ.edu"}
+  ]
+}
